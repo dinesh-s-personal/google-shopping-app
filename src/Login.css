@@ -1,0 +1,92 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+  
+.container {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    font: normal normal 800 24px/29px Montserrat;
+    letter-spacing: 0.14px;
+    color: #091B29;
+    opacity: 1;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E4E8EE;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+.form-container {
+    border: 1px solid #000000;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    text-align: left;
+    font: normal normal 600 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #091B29;
+    opacity: 1;
+}
+
+.login-form label {
+    text-align: left;
+    font: normal normal normal 12px/15px Montserrat;
+    letter-spacing: 0px;
+    color: #98A0AC;
+    opacity: 1;
+}

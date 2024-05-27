@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
