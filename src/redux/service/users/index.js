@@ -9,11 +9,13 @@ export const gproductsAPI = createApi({
       GetLoginUserDetails: builder.query({
           query: () => ({ url: '/users'})
       }),
-  
-      createAccount: builder.mutation({
+      CreateAccount: builder.mutation({
         query: (payload) => ({ url: '/users', method: 'POST', body: payload})
+      }),
+      GetProductDetails: builder.query({
+        query: () => ({ url: '/products-list'})
       })
     }),
 })
 
-export const { useGetLoginUserDetailsQuery, useCreateAccountMutation } = gproductsAPI;
+export const { useGetLoginUserDetailsQuery, useCreateAccountMutation, useGetProductDetailsQuery } = gproductsAPI;

@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import './App.css';
 import './Login.css';
+import './Products.css';
 import LoginAppNew from './screens/login/loginNew';
 import { AppRoutes } from './router/routes';
 import { RouterProvider, createBrowserRouter, redirect } from 'react-router-dom';
-import { ProductsList } from './screens/products/productDetails';
+import { ProductsList } from './screens/products/gProductsPage';
 import { CreateUserAccount } from './screens/login/createAccount';
 import { Provider } from 'react-redux';
 import { gproductsAPI } from './redux/service/users';
