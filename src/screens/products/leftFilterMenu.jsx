@@ -13,6 +13,8 @@ export const LeftFilterMenu = () => {
                 id="category1" 
                 label="Phones" 
                 defaultChecked
+                // onChange={(e) => e.target.checked}
+                // checked=
             />
             </ListGroup.Item>
             <ListGroup.Item className='products-form'>

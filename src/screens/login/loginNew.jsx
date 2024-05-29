@@ -45,7 +45,7 @@ const LoginAppNew = () => {
     };
 
     return (
-        <div className="container">
+        <div className="login-container">
             <div className="left-section">
                 <Image src="./ProductAppImages/google-shopping-visuel.jpg" fluid />
             </div>
@@ -53,49 +53,41 @@ const LoginAppNew = () => {
                 <div className="login-form">
                     <h2>Login</h2>
                     <Form onSubmit={onFormSubmit} className="form-container">
-                        <Row>
-                            <h6>Provide your login credentials</h6>
-                        </Row>
                         
-                        <Row>
-                            <Form.Group as={Row} controlId="formHorizontalUserName">
-                                <Form.Label column sm={25}>
-                                Email
-                                </Form.Label>
-                                <Col sm={25}>
-                                <Form.Control required type="email" placeholder="Email" 
-                                    value={username} onChange={(e) => { setUsername(e.target.value) }}/>
-                                </Col>
-                            </Form.Group>
-                        </Row>
-
-                        <Row>
-                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                                <Form.Label column sm={25}>
-                                Password
-                                </Form.Label>
-                                <Col sm={25}>
-                                <Form.Control required type="password" placeholder="Password" 
-                                    value={pwd} onChange={(e) => {setPwd(e.target.value)}}/>
-                                </Col>
-                            </Form.Group>
-                        </Row>
-
-                        <Row>
-                            <Form.Group as={Row} className="mb-3">
-                                <Col >
-                                <Button variant="primary" type="submit" onClick={btnLogin}>Login</Button>
-                                </Col>
-                            </Form.Group>
-                        </Row>
-
-                        <Row>
-                            <Form.Group as={Row} className="mb-3">
-                                <Col >
-                                <span>Not a user? <a href="/create-acct">Create Account!</a></span>
-                                </Col>
-                            </Form.Group>
-                        </Row>
+                        <h6>Provide your login credentials</h6>
+                    
+                        <Form.Group as={Row} controlId="formHorizontalUserName">
+                            <Form.Label column sm={25}>
+                            Email
+                            </Form.Label>
+                            <Col sm={25}>
+                            <Form.Control required type="email" placeholder="Email" 
+                                value={username} onChange={(e) => { setUsername(e.target.value) }}/>
+                            </Col>
+                        </Form.Group>
+                    
+                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
+                            <Form.Label column sm={25}>
+                            Password
+                            </Form.Label>
+                            <Col sm={25}>
+                            <Form.Control required type="password" placeholder="Password" 
+                                value={pwd} onChange={(e) => {setPwd(e.target.value)}}/>
+                            </Col>
+                        </Form.Group>
+                    
+                        <Form.Group as={Row} className="mb-3">
+                            <Col >
+                            <Button variant="primary" type="submit" onClick={btnLogin}>Login</Button>
+                            </Col>
+                        </Form.Group>
+                    
+                        <Form.Group as={Row} className="mb-3">
+                            <Col >
+                            <span>Not a user? <a href="/create-acct">Create Account!</a></span>
+                            </Col>
+                        </Form.Group>
+                        
 
                         {!loginFailure && <div>
                         <br />

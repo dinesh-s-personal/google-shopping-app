@@ -5,7 +5,7 @@ html, body {
     padding: 0;
 }
   
-.container {
+.login-container {
     height: 100vh; /* Full viewport height */
     display: flex;
 }
@@ -15,6 +15,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
 }
 
 .right-section {
@@ -23,6 +24,7 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: #f8f9fa;
+    width: 50%;
 }
 
 .login-form {

@@ -19,6 +19,8 @@ export const CreateUserAccount = () => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+
+        btnCreateUser();
     };
 
     const btnCreateUser = () => {
@@ -48,7 +50,7 @@ export const CreateUserAccount = () => {
         }
     }
 
-    return <div className="container">
+    return <div className="login-container">
         <div className="left-section">
             <Image src="./ProductAppImages/google-shopping-visuel.jpg" fluid />
         </div>
@@ -56,69 +58,65 @@ export const CreateUserAccount = () => {
             <div className="login-form">
                 <h2>Welcome to Google Store!</h2>
                 <Form onSubmit={onFormSubmit} className="form-container" autoComplete="off">
-                    <Row>
-                        <h6>Register your account</h6>
-                    </Row>
                     
-                    <Row>
-                        <Form.Group as={Row} controlId="formHorizontalUserName">
-                            <Form.Label column sm={25}>
-                            Username
-                            </Form.Label>
-                            <Col sm={25}>
-                            <Form.Control required type="text" placeholder="username" 
-                                value={username} onChange={(e) => { setUsername(e.target.value) }}/>
-                            </Col>
-                        </Form.Group>
-                    </Row>
-
-                    <Row>
-                        <Form.Group as={Row} controlId="formHorizontalUserEmail">
-                            <Form.Label column sm={25}>
-                            Email ID
-                            </Form.Label>
-                            <Col sm={25}>
-                            <Form.Control required type="email" placeholder="Email Id" 
-                                value={useremail} onChange={(e) => { setUserEmail(e.target.value) }}/>
-                            </Col>
-                        </Form.Group>
-                    </Row>
-
-                    <Row>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalCreatePassword">
-                            <Form.Label column sm={25}>
-                            Create Password
-                            </Form.Label>
-                            <Col sm={25}>
-                            <Form.Control required type="password" placeholder="Password" 
-                                value={pwd} onChange={(e) => {setPwd(e.target.value)}}/>
-                            </Col>
-                        </Form.Group>
-                    </Row>
-
-                    <Row>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalReTypePassword">
-                            <Form.Label column sm={25}>
-                            Retype Password
-                            </Form.Label>
-                            <Col sm={25}>
-                            <Form.Control required type="password" placeholder="Password" 
-                                value={retypepwd} onChange={btnRetypePwdChange}/>
-                                
-                            </Col>
-                        </Form.Group>
-                    </Row>
-
-                    <Row>
-                        <Form.Group as={Row} className="mb-3">
-                            <Col >
-                            <Button id="createAccount" disabled={isValidationFailure} 
-                                    variant="primary" type="submit" onClick={btnCreateUser}>
-                                        {isLoading ? 'Creating Account...' : 'Create Account'}
-                            </Button>
-                            </Col>
-                        </Form.Group>
-                    </Row>
+                    <h6>Register your account</h6>
+                
+                    <Form.Group as={Row} controlId="formHorizontalUserName">
+                        <Form.Label column sm={25}>
+                        Username
+                        </Form.Label>
+                        <Col sm={25}>
+                        <Form.Control required type="text" placeholder="username" 
+                            value={username} onChange={(e) => { setUsername(e.target.value) }}/>
+                        </Col>
+                    </Form.Group>
+                
+                    <Form.Group as={Row} controlId="formHorizontalUserEmail">
+                        <Form.Label column sm={25}>
+                        Email ID
+                        </Form.Label>
+                        <Col sm={25}>
+                        <Form.Control required type="email" placeholder="Email Id" 
+                            value={useremail} onChange={(e) => { setUserEmail(e.target.value) }}/>
+                        </Col>
+                    </Form.Group>
+                
+                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalCreatePassword">
+                        <Form.Label column sm={25}>
+                        Create Password
+                        </Form.Label>
+                        <Col sm={25}>
+                        <Form.Control required type="password" placeholder="Password" 
+                            value={pwd} onChange={(e) => {setPwd(e.target.value)}}/>
+                        </Col>
+                    </Form.Group>
+                
+                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalReTypePassword">
+                        <Form.Label column sm={25}>
+                        Retype Password
+                        </Form.Label>
+                        <Col sm={25}>
+                        <Form.Control required type="password" placeholder="Password" 
+                            value={retypepwd} onChange={btnRetypePwdChange}/>
+                            
+                        </Col>
+                    </Form.Group>
+                
+                    <Form.Group as={Row} className="mb-3">
+                        <Col >
+                        <Button id="createAccount" disabled={isValidationFailure} 
+                                variant="primary" type="submit">
+                                    {isLoading ? 'Creating Account...' : 'Create Account'}
+                        </Button>
+                        </Col>
+                    </Form.Group>
+                
+                    <Form.Group as={Row} className="mb-3">
+                        <Col >
+                        <span>Already a user? <a href="/login">Login!</a></span>
+                        </Col>
+                    </Form.Group>
+                    
 
                     {(creationFailure || isError) && <div>
                     <br />
