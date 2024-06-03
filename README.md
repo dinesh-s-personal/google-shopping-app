@@ -70,14 +70,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+### Refer this document for the thinking in react
+
+https://docs.google.com/document/d/1xhO3rfuWXsocJEQYwe4UIRofoYk2cwLkQBtnhQL5AMU/edit
+
+
 ### External dependencies installed
+
 npx create-react-app credo-final-assignment
 
 git remote add origin https://github.com/dinesh-s-personal/google-shopping-app.git
+
 git add .
+
 git commit -m "My first git commit"
+
 git push -u origin master
 
 npm i react-bootstrap bootstrap
+
 npm i react-router-dom
+
 npm i @reduxjs/toolkit react-redux
