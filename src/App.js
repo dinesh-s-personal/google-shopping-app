@@ -1,4 +1,3 @@
-import { configureStore } from '@reduxjs/toolkit';
 import './App.css';
 import './Login.css';
 import './Products.css';
@@ -7,17 +6,9 @@ import { AppRoutes } from './router/routes';
 import { RouterProvider, createBrowserRouter, redirect } from 'react-router-dom';
 import { ProductsList } from './screens/products/gProductsPage';
 import { CreateUserAccount } from './screens/login/createAccount';
-import { Provider } from 'react-redux';
-import { gproductsAPI } from './redux/service/users';
-
-const store = configureStore({
-  reducer: {
-    [gproductsAPI.reducerPath]: gproductsAPI.reducer,
-  },
-  middleware: (getDefaultMiddleware) => 
-    getDefaultMiddleware()
-      .concat(gproductsAPI.middleware),
-})
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchProducts } from './store/store';
 
 const protectedRouteLoader = () => {
   if (localStorage.getItem('loginStatus') !== 'Login successful'){
@@ -59,10 +50,15 @@ const router = createBrowserRouter(
 )
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
   return (
-    <Provider store={store}> 
       <RouterProvider router = {router}></RouterProvider>
-    </Provider>
   );
 }
 
