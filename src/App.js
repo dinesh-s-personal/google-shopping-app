@@ -58,7 +58,9 @@ function App() {
   }, [dispatch]);
 
   return (
-      <RouterProvider router = {router}></RouterProvider>
+      <RouterProvider router = {router}>
+        localStorage.removeItem('loginStatus');
+      </RouterProvider>
   );
 }
 
