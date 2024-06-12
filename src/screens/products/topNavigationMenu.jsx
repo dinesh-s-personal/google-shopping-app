@@ -35,7 +35,7 @@ export const TopNavBar = () => {
                 navbarScroll
             >
                 <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Products</Nav.Link>
+                <Nav.Link href="#action2" className='left-nav-selected'> * Products</Nav.Link>
                 <Nav.Link href="#action3">Services</Nav.Link>
                 <Nav.Link href="#action4">About us</Nav.Link>
                 
